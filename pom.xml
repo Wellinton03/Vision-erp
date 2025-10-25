@@ -8,11 +8,11 @@
 		<version>3.5.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.inteligence</groupId>
+	<groupId>com.vision</groupId>
 	<artifactId>erp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>Inteligence-erp</name>
+	<packaging>jar</packaging>
+	<name>Vision-erp</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
