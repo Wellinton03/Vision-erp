@@ -38,7 +38,7 @@ public class EventoController {
     }
 
     @PostMapping("/cadastrar")
-    public ResponseEntity criar(@RequestBody EventoDTO evento) {
+    public ResponseEntity<String> criar(@RequestBody EventoDTO evento) {
         try {
             this.eventoService.criar(evento);
             return ResponseEntity.status(201).build();

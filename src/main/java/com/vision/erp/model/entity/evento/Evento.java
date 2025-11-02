@@ -6,6 +6,7 @@ import com.vision.erp.model.enun.StatusEvento;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 @Entity
 @Table(name = "evento")
@@ -19,8 +20,6 @@ public class Evento {
         this.statusEvento = dto.getStatusEvento();
         this.tipoEvento = dto.getTipoEvento();
         this.descricao = dto.getDescricao();
-        this.relator = dto.getRelator();
-        this.responsavel = dto.getResponsavel();
         this.setorResponsavel = dto.getSetorResponsavel();
         this.dtAlteracao = dto.getDtAlteracao();
         this.dtInclusao = dto.getDtInclusao();
@@ -153,5 +152,17 @@ public class Evento {
 
     public void setItem(Item item) {
         this.item = item;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Evento evento = (Evento) o;
+        return Objects.equals(id, evento.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }
